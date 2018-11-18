@@ -68,7 +68,7 @@ Settings.tabs = {
     tvshow: {
         order: 2,
         name: 'Series',
-        uri: ['TVApi?'
+        uri: ['TVShowApi?'
       +'&apiURL='
         + 'https://tv-v2.api-fetch.website/,'
         + 'cloudflare+https://tv-v2.api-fetch.website,'
