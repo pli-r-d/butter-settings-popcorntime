@@ -7,33 +7,33 @@ const os = require('os')
 var Settings = new Object({
     set: function (key, value) {this[key] = value},
     get: function (key) {return this[key]},
-    projectName: 'Butter',
-    projectUrl: 'http://butterproject.org',
-    projectTwitter: 'butterproject',
-    projectFacebook: 'ButterProjectOrg',
-    projectGooglePlus: 'ButterProject',
-    projectBlog: 'http://blog.butterproject.org/',
-    projectForum: 'https://www.reddit.com/r/ButterProject',
+    projectName: 'Popcorn Time',
+        projectUrl: 'https://popcorntime.sh',
+        projectTwitter: 'popcorntimetv',
+        projectFacebook: 'PopcornTimedotSh',
+        projectGooglePlus: 'popcorntimeshplus',
+        projectBlog: 'https://blog.popcorntime.sh/',
+        projectForum: 'https://www.reddit.com/r/PopcornTime',
 
-    statusUrl: 'https://status.butterproject.org',
-    changelogUrl: 'https://github.com/butterproject/butter-desktop/commits/master',
-    issuesUrl: 'https://github.com/butterproject/butter-desktop/issues',
-    sourceUrl: 'https://github.com/butterproject/butter-desktop/',
-    commitUrl: 'https://github.com/butterproject/butter-desktop/commit',
-    updateKey: '-----BEGIN PUBLIC KEY-----\n' +
-        'MIIBtjCCASsGByqGSM44BAEwggEeAoGBAPNM5SX+yR8MJNrX9uCQIiy0t3IsyNHs\n' +
-        'HWA180wDDd3S+DzQgIzDXBqlYVmcovclX+1wafshVDw3xFTJGuKuva7JS3yKnjds\n' +
-        'NXbvM9CrJ2Jngfd0yQPmSh41qmJXHHSwZfPZBxQnspKjbcC5qypM5DqX9oDSJm2l\n' +
-        'fM/weiUGnIf7AhUAgokTdF7G0USfpkUUOaBOmzx2RRkCgYAyy5WJDESLoU8vHbQc\n' +
-        'rAMnPZrImUwjFD6Pa3CxhkZrulsAOUb/gmc7B0K9I6p+UlJoAvVPXOBMVG/MYeBJ\n' +
-        '19/BH5UNeI1sGT5/Kg2k2rHVpuqzcvlS/qctIENgCNMo49l3LrkHbJPXKJ6bf+T2\n' +
-        '8lFWRP2kVlrx/cHdqSi6aHoGTAOBhAACgYBTNeXBHbWDOxzSJcD6q4UDGTnHaHHP\n' +
-        'JgeCrPkH6GBa9azUsZ+3MA98b46yhWO2QuRwmFQwPiME+Brim3tHlSuXbL1e5qKf\n' +
-        'GOm3OxA3zKXG4cjy6TyEKajYlT45Q+tgt1L1HuGAJjWFRSA0PP9ctC6nH+2N3HmW\n' +
-        'RTcms0CPio56gg==\n' +
-        '-----END PUBLIC KEY-----\n',
+        statusUrl: 'http://status.popcorntime.sh',
+        changelogUrl: 'https://github.com/popcorn-official/popcorn-desktop/commits/master',
+        issuesUrl: 'https://github.com/popcorn-official/popcorn-desktop/issues',
+        sourceUrl: 'https://github.com/popcorn-official/popcorn-desktop/',
+        commitUrl: 'https://github.com/popcorn-official/popcorn-desktop/commit',
+        updateKey: '-----BEGIN PUBLIC KEY-----\n' +
+            'MIIBtjCCASsGByqGSM44BAEwggEeAoGBAPNM5SX+yR8MJNrX9uCQIiy0t3IsyNHs\n' +
+            'HWA180wDDd3S+DzQgIzDXBqlYVmcovclX+1wafshVDw3xFTJGuKuva7JS3yKnjds\n' +
+            'NXbvM9CrJ2Jngfd0yQPmSh41qmJXHHSwZfPZBxQnspKjbcC5qypM5DqX9oDSJm2l\n' +
+            'fM/weiUGnIf7AhUAgokTdF7G0USfpkUUOaBOmzx2RRkCgYAyy5WJDESLoU8vHbQc\n' +
+            'rAMnPZrImUwjFD6Pa3CxhkZrulsAOUb/gmc7B0K9I6p+UlJoAvVPXOBMVG/MYeBJ\n' +
+            '19/BH5UNeI1sGT5/Kg2k2rHVpuqzcvlS/qctIENgCNMo49l3LrkHbJPXKJ6bf+T2\n' +
+            '8lFWRP2kVlrx/cHdqSi6aHoGTAOBhAACgYBTNeXBHbWDOxzSJcD6q4UDGTnHaHHP\n' +
+            'JgeCrPkH6GBa9azUsZ+3MA98b46yhWO2QuRwmFQwPiME+Brim3tHlSuXbL1e5qKf\n' +
+            'GOm3OxA3zKXG4cjy6TyEKajYlT45Q+tgt1L1HuGAJjWFRSA0PP9ctC6nH+2N3HmW\n' +
+            'RTcms0CPio56gg==\n' +
+            '-----END PUBLIC KEY-----\n',
     opensubtitles: {
-        useragent: 'Butter'
+        useragent: 'Popcorn Time NodeJS'
     },
     trakttv: {
         client_id: '647c69e4ed1ad13393bf6edd9d8f9fb6fe9faf405b44320a6b71ab960b4540a2',
@@ -58,36 +58,38 @@ Settings.tabs = {
     movie: {
         order: 1,
         name: 'Movies',
-        providers: ['vodo', 'archive',
-          //'stremio?auth={"url":"http://api8.herokuapp.com","key":"423f59935153f2f5d2db0f6c9b812592b61b3737"}&url=http://localhost:9005'
-        ]
+        uri: ['MovieApi?'
+      +'&apiURL='
+        + 'https://movies-v2.api-fetch.website/,'
+        + 'cloudflare+https://movies-v2.api-fetch.website,'
+//                     + 'cloudflare+http://xor.image.yt'
+     ]
     },
     tvshow: {
         order: 2,
         name: 'Series',
-        providers: [
-            'youtube?channel=kurzgesagt',
-            'youtube?channel=devinsupertramp',
-            'youtube?channel=TEDtalksDirector',
-            'youtube?channel=BadLipReading',
-            'youtube?channel=1veritasium',
-            'youtube?channel=enyay', // tom scott
-            'youtube?channel=CinemaSins',
-            'youtube?channel=TomSka',
-            'youtube?channel=ExplosmEntertainment',
-            'youtube?channel=everyframeapainting',
-            'youtube?channel=willunicycleforfood', // exurb1a
-            //'youtube?channel=petercapusottotv&titleRegex=[0-9]+[aª] +Temporada',
-            'ccc?langs=["eng"]&formats=["video/mp4","video/webm"]&urlList=["http://localhost:8080/"]'
-        ],
+        uri: ['TVApi?'
+      +'&apiURL='
+        + 'https://tv-v2.api-fetch.website/,'
+        + 'cloudflare+https://tv-v2.api-fetch.website,'
+//                     + 'http://tv.ytspt.re/'
+     ]
     },
-    test: {
-        name: 'Test',
-        providers: [
-            'ccc',
-            'vodo'
-        ]
-    }
+    anime: {
+             order: 3,
+             name: 'Anime',
+             uri: ['AnimeApi?'
+                   +'&apiURL='
+                     + 'https://anime.api-fetch.website/,'
+                     + 'cloudflare+https://anime.api-fetch.website,'
+//                     + 'http://tv.ytspt.re/'
+                  ]
+         },
+         indie: {
+             order: 4,
+             name: 'Indie',
+             uri: ['vodo']
+         }
 };
 
 Settings.providers = {
@@ -196,17 +198,13 @@ Settings.onlineSearchEngine = 'KAT';
 Settings.totalDownloaded = 0;
 Settings.totalUploaded = 0;
 
-Settings.updateEndpoint = {
-    url: 'https://butterproject.org/',
-    index: 0,
-    proxies: [{
-        url: 'https://butterproject.org/',
-        fingerprint: '',
-    }, {
-        url: 'https://butterproject.github.io/',
-        fingerprint: ''
-    }]
-};
+Settings.updateEndpoint: {
+        url: 'https://popcorntime.sh/',
+        index: 0,
+        proxies: [{
+            url: 'https://popcorntime.app/'
+        }]
+    },
 
 // App Settings
 Settings.version = false;
