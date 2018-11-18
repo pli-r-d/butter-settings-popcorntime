@@ -198,7 +198,7 @@ Settings.onlineSearchEngine = 'KAT';
 Settings.totalDownloaded = 0;
 Settings.totalUploaded = 0;
 
-Settings.updateEndpoint: {
+Settings.updateEndpoint = {
         url: 'https://popcorntime.sh/',
         index: 0,
         proxies: [{
