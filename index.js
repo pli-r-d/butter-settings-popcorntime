@@ -158,8 +158,8 @@ Settings.subtitle_font = 'Arial';
 
 // More options
 Settings.httpApiPort = 8008;
-Settings.httpApiUsername = 'butter';
-Settings.httpApiPassword = 'butter';
+Settings.httpApiUsername = 'popcorn';
+Settings.httpApiPassword = 'popcorn';
 
 // Trakt.tv
 Settings.traktStatus = false;
@@ -189,7 +189,7 @@ Settings.minimizeToTray = false;
 Settings.bigPicture = false;
 
 // Features
-Settings.activateTorrentCollection = false;
+Settings.activateTorrentCollection = true;
 Settings.activateWatchlist = true;
 Settings.activateRandomize = true;
 Settings.onlineSearchEngine = 'KAT';
